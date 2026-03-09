@@ -1,0 +1,42 @@
+:root {
+    --primary: #00f2ff;
+    --accent: #0077ff;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { margin: 0; font-family: 'Space Grotesk', sans-serif; background: #000; color: white; overflow-x: hidden; }
+
+#bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; }
+main { position: relative; z-index: 1; max-width: 1000px; margin: 0 auto; padding: 5rem 1.5rem; }
+
+header { text-align: center; margin-bottom: 6rem; }
+h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+.header-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
+.github-btn, .contact-btn, .phone-btn, .resume-btn { padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.4s; font-size: 0.85rem; }
+.github-btn { border: 2px solid var(--primary); color: white; }
+.contact-btn { background: white; color: black; }
+.phone-btn { border: 2px solid var(--primary); color: var(--primary); }
+.resume-btn { border: 2px solid var(--accent); color: var(--accent); }
+
+.glass-card { background: var(--glass); backdrop-filter: blur(20px); border: 1px solid rgba(0, 242, 255, 0.2); border-radius: 25px; padding: 3rem; margin-bottom: 3rem; }
+
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.cert-item { background: rgba(255,255,255,0.03); padding: 15px; border-radius: 15px; border: 1px solid rgba(0,242,255,0.1); }
+
+.terminal-window { font-family: 'Fira Code', monospace; padding: 0 !important; overflow: hidden; }
+.terminal-header { background: rgba(255,255,255,0.1); padding: 10px 20px; display: flex; align-items: center; gap: 8px; }
+.terminal-body { padding: 25px; font-size: 0.85rem; }
+.prompt { color: var(--primary); } .response { color: var(--accent); margin-bottom: 10px; }
+
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.skill-category li { background: rgba(0, 242, 255, 0.05); margin: 8px 0; padding: 10px; border-radius: 10px; list-style: none; transition: 0.3s; }
+
+.projects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.project-card:hover { transform: translateY(-10px); }
+.badge { color: var(--primary); border: 1px solid var(--primary); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; margin-bottom: 10px; display: block; }
+.tech-tags span { background: var(--accent); padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; margin-right: 5px; }
+
+.footer-btns { display: flex; justify-content: center; gap: 10px; margin-top: 15px; }
+.copy-btn { background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 8px 15px; border-radius: 50px; cursor: pointer; transition: 0.3s; font-size: 0.8rem; }
